@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="xXGlitchIoXx - Gaming, Glitches, and Tutorials">
+    <title>Glitch Gaming Central</title>
+    <style>
+        /* Global styles */
+        body {
+            background-color: #000;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            min-height: 100vh;
+            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
+        }
+
+        @keyframes background-fade {
+            0% { background-color: #ff0000; }
+            25% { background-color: #00ff00; }
+            50% { background-color: #0000ff; }
+            75% { background-color: #ff00ff; }
+            100% { background-color: #ffff00; }
+        }
+
+        /* Header and Intro Fade Effect */
+        header, .intro {
+            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
+        }
+
+        /* Glitchy Text Effect */
+        @keyframes glitch {
+            0% { text-shadow: 1px 0 red, -1px 0 blue; }
+            10% { text-shadow: -1px 0 red, 1px 0 blue; }
+            20% { text-shadow: 1px 0 green, -1px 0 yellow; }
+            30% { text-shadow: -1px 0 green, 1px 0 yellow; }
+            40% { text-shadow: 2px 0 red, -2px 0 blue; }
+            50% { text-shadow: -2px 0 red, 2px 0 blue; }
+            60% { text-shadow: 1px 0 orange, -1px 0 purple; }
+            70% { text-shadow: -1px 0 orange, 1px 0 purple; }
+            80% { text-shadow: 2px 0 yellow, -2px 0 cyan; }
+            90% { text-shadow: -2px 0 yellow, 2px 0 cyan; }
+            100% { text-shadow: 1px 0 red, -1px 0 blue; }
+        }
+
+        .glitch {
+            font-size: 4rem; /* Increased font size */
+            font-weight: bold;
+            color: #000; /* Changed text color to black */
+            animation: glitch 1s infinite;
+        }
+
+        .intro {
+            font-size: 2.5rem; /* Increased font size */
+            margin-top: 20px;
+            color: #000; /* Changed text color to black */
+            font-weight: bold; /* Made text bold */
+            animation: glitch 1s infinite;
+        }
+
+        /* Video Card Container */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            color: #000;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 20s ease-in-out infinite; /* Sync fade with background */
+            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
+            font-weight: bold; /* Made text bold */
+        }
+
+        .video-card:hover {
+            transform: scale(1.05);
+        }
+
+        .video-title, .video-card p {
+            font-size: 1.5rem;
+            font-weight: bold; /* Made text bold */
+            color: #000; /* Changed text color to black */
+            animation: glitch 1s infinite;
+        }
+
+        /* Contact Button styles */
+        .contact-button {
+            color: #000; /* Changed text color to black */
+            padding: 20px 40px; /* Increased padding for better legibility */
+            margin: 15px;
+            border-radius: 8px;
+            font-size: 3rem; /* Increased font size for even larger text */
+            text-decoration: none;
+            background: none; /* Removed background */
+            border: none; /* Removed border */
+            transition: transform 0.3s ease;
+            animation: glitch 1s infinite; /* Added glitch effect */
+        }
+
+        .contact-button:hover {
+            transform: scale(1.1);
+            color: #fff;
+            background-color: #000;
+        }
+
+        /* Contact Section with multi-color fade background */
+        .contact-section {
+            background-color: #000;
+            padding: 50px 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
+            font-weight: bold; /* Made text bold */
+        }
+
+        .contact-section h2 {
+            color: #000; /* Changed text color to black */
+            font-weight: bold; /* Made text bold */
+            animation: glitch 1s infinite;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #0ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #ff00ff;
+        }
+
+        /* Mobile-first responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-button {
+                font-size: 2rem; /* Slightly smaller font on mobile */
+                padding: 15px 30px;
+            }
+
+            .video-card {
+                padding: 15px;
+                margin: 10px 0;
+            }
+
+            .glitch {
+                font-size: 3rem;
+            }
+
+            .intro {
+                font-size: 2rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Ensuring Symmetry and Layout */
+        .video-card, .contact-section, footer {
+            max-width: 100%; /* Ensures it takes full width */
+            margin: 0 auto;
+        }
+
+        .video-title, .video-card p, .contact-section h2 {
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Center align buttons in contact section */
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Music Player -->
+    <audio id="background-music" loop autoplay>
+        <source src="Judas.mp3" type="audio/mp3">
+        <source src="Judas.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Header Section -->
+    <header>
+        <div class="glitch">xXGlitchIoXx</div>
+        <p class="intro">WELCOME TO THE WORLD OF MODDING!</p>
+    </header>
+
+    <!-- Video Grid Section -->
+    <section class="video-grid">
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" class="video-card" target="_blank">
+            <div class="video-title">LEARNING TO MOD</div>
+            <p>This Playlist Will Teach You The Brief Surface of Modding a Game.</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" class="video-card" target="_blank">
+            <div class="video-title">MODDED SAVES</div>
+            <p>In This Playlist You Will Find All of My Modded Saves.</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" class="video-card" target="_blank">
+            <div class="video-title">GLITCHES & EXPLOITS</div>
+            <p>This Contains All Glitches/Exploits I Discover & Post.</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_4" class="video-card" target="_blank">
+            <div class="video-title">GAMEPLAY & TUTORIALS</div>
+            <p>The Playlist Linked Will Give You Epic Gameplay or Tutorials on Certain Things.</p>
+        </a>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>SUGGEST CONTENT</h2>
+        <div class="contact-buttons">
+            <a href="https://discord.com/users/1066557474871709749" class="contact-button" target="_blank">DISCORD</a>
+            <a href="https://t.me/xXGlitchIoXx" class="contact-button" target="_blank">TELEGRAM</a>
+            <a href="mailto:xxglitchioxxgaming@gmail.com" class="contact-button" target="_blank">EMAIL</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>
+Copyright (c) 2024 xXGlitchIoXx
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is provided to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+| <a href="https://www.youtube.com/@xXGlitchIoXx" target="_blank">Visit my YouTube Channel</a></p>
+    </footer>
+
+    <script>
+        // Set background music volume to low
+        document.getElementById('background-music').volume = 0.1;
+    </script>
+</body>
+</html>
