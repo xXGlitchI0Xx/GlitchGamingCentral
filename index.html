@@ -196,16 +196,17 @@
 
         /* Language Selector */
         .language-select {
-            position: absolute;
+            position: fixed; /* Make it fixed at the top */
             top: 20px;
-            right: 20px;
+            left: 20px; /* Align it to the left */
             background-color: #333;
             color: white;
             padding: 10px 20px;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: 1.2rem;
             border: none;
             cursor: pointer;
+            z-index: 1000; /* Make sure it's on top */
         }
     </style>
 </head>
@@ -285,7 +286,7 @@
                 document.getElementById("video-4-title").innerText = "JUEGOS Y TUTORIALES";
                 document.getElementById("video-4-desc").innerText = "Aquí están mis videos de juegos y tutoriales.";
                 document.getElementById("contact-title").innerText = "Contáctame";
-            } 
+            }
             // Add more languages here as needed
         }
     </script>
