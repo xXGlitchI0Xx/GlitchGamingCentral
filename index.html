@@ -15,7 +15,7 @@
             padding: 0;
             text-align: center;
             min-height: 100vh;
-            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
+            animation: background-fade 40s ease-in-out infinite; /* Slow down fading effect */
         }
 
         @keyframes background-fade {
@@ -28,7 +28,7 @@
 
         /* Header and Intro Fade Effect */
         header, .intro {
-            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
+            animation: background-fade 40s ease-in-out infinite; /* Slow down fading effect */
         }
 
         /* Glitchy Text Effect */
@@ -47,17 +47,17 @@
         }
 
         .glitch {
-            font-size: 4rem; /* Increased font size */
+            font-size: 4rem;
             font-weight: bold;
-            color: #000; /* Changed text color to black */
+            color: #000;
             animation: glitch 1s infinite;
         }
 
         .intro {
-            font-size: 2.5rem; /* Increased font size */
+            font-size: 2.5rem;
             margin-top: 20px;
-            color: #000; /* Changed text color to black */
-            font-weight: bold; /* Made text bold */
+            color: #000;
+            font-weight: bold;
             animation: glitch 1s infinite;
         }
 
@@ -78,9 +78,9 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             color: #000;
             text-decoration: none;
-            transition: transform 0.3s ease, background-color 20s ease-in-out infinite; /* Sync fade with background */
-            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
-            font-weight: bold; /* Made text bold */
+            transition: transform 0.3s ease, background-color 40s ease-in-out infinite;
+            animation: background-fade 40s ease-in-out infinite; /* Slow down fading effect */
+            font-weight: bold;
         }
 
         .video-card:hover {
@@ -89,23 +89,23 @@
 
         .video-title, .video-card p {
             font-size: 1.5rem;
-            font-weight: bold; /* Made text bold */
-            color: #000; /* Changed text color to black */
+            font-weight: bold;
+            color: #000;
             animation: glitch 1s infinite;
         }
 
         /* Contact Button styles */
         .contact-button {
-            color: #000; /* Changed text color to black */
-            padding: 20px 40px; /* Increased padding for better legibility */
+            color: #000;
+            padding: 20px 40px;
             margin: 15px;
             border-radius: 8px;
-            font-size: 3rem; /* Increased font size for even larger text */
+            font-size: 3rem;
             text-decoration: none;
-            background: none; /* Removed background */
-            border: none; /* Removed border */
+            background: none;
+            border: none;
             transition: transform 0.3s ease;
-            animation: glitch 1s infinite; /* Added glitch effect */
+            animation: glitch 1s infinite;
         }
 
         .contact-button:hover {
@@ -121,13 +121,13 @@
             margin-top: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
-            font-weight: bold; /* Made text bold */
+            animation: background-fade 40s ease-in-out infinite;
+            font-weight: bold;
         }
 
         .contact-section h2 {
-            color: #000; /* Changed text color to black */
-            font-weight: bold; /* Made text bold */
+            color: #000;
+            font-weight: bold;
             animation: glitch 1s infinite;
         }
 
@@ -151,7 +151,7 @@
         /* Mobile-first responsive adjustments */
         @media (max-width: 768px) {
             .contact-button {
-                font-size: 2rem; /* Slightly smaller font on mobile */
+                font-size: 2rem;
                 padding: 15px 30px;
             }
 
@@ -175,7 +175,7 @@
 
         /* Ensuring Symmetry and Layout */
         .video-card, .contact-section, footer {
-            max-width: 100%; /* Ensures it takes full width */
+            max-width: 100%;
             margin: 0 auto;
         }
 
@@ -184,7 +184,6 @@
             text-align: center;
         }
 
-        /* Center align buttons in contact section */
         .contact-buttons {
             display: flex;
             justify-content: center;
@@ -194,42 +193,64 @@
         .contact-button {
             margin: 10px;
         }
+
+        /* Language Selector */
+        .language-select {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Language Selector Dropdown -->
+    <select class="language-select" id="language-select" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+    </select>
+
     <!-- Header Section -->
     <header>
-        <div class="glitch">xXGlitchIoXx</div>
-        <p class="intro">WELCOME TO THE WORLD OF MODDING!</p>
+        <div class="glitch" id="header-text">xXGlitchIoXx</div>
+        <p class="intro" id="intro-text">WELCOME TO THE WORLD OF MODDING!</p>
     </header>
 
     <!-- Video Grid Section -->
     <section class="video-grid">
         <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" class="video-card" target="_blank">
-            <div class="video-title">LEARNING TO MOD</div>
-            <p>This Playlist Will Teach You The Brief Surface of Modding a Game.</p>
+            <div class="video-title" id="video-1-title">LEARNING TO MOD</div>
+            <p id="video-1-desc">This Playlist Will Teach You The Brief Surface of Modding a Game.</p>
         </a>
         <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" class="video-card" target="_blank">
-            <div class="video-title">MODDED SAVES</div>
-            <p>In This Playlist You Will Find All of My Modded Saves.</p>
+            <div class="video-title" id="video-2-title">MODDED SAVES</div>
+            <p id="video-2-desc">In This Playlist You Will Find All of My Modded Saves.</p>
         </a>
         <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" class="video-card" target="_blank">
-            <div class="video-title">GLITCHES & EXPLOITS</div>
-            <p>This Contains All Glitches/Exploits I Discover & Post.</p>
+            <div class="video-title" id="video-3-title">GLITCHES & EXPLOITS</div>
+            <p id="video-3-desc">This Contains All Glitches/Exploits I Discover & Post.</p>
         </a>
         <a href="https://www.youtube.com/watch?v=VIDEO_ID_4" class="video-card" target="_blank">
-            <div class="video-title">GAMEPLAY & TUTORIALS</div>
-            <p>The Playlist Linked Will Give You Epic Gameplay or Tutorials on Certain Things.</p>
+            <div class="video-title" id="video-4-title">GAMEPLAY & TUTORIALS</div>
+            <p id="video-4-desc">In This Playlist, You Will Find My Gameplay Videos & Tutorials.</p>
         </a>
     </section>
 
     <!-- Contact Section -->
     <section class="contact-section">
-        <h2>SUGGEST CONTENT</h2>
+        <h2 id="contact-title">Contact Me</h2>
         <div class="contact-buttons">
-            <a href="https://discord.com/users/1066557474871709749" class="contact-button" target="_blank">DISCORD</a>
-            <a href="https://t.me/xXGlitchIoXx" class="contact-button" target="_blank">TELEGRAM</a>
+            <a href="https://www.youtube.com/@xXGlitchIoXx" class="contact-button" target="_blank">YOUTUBE</a>
             <a href="mailto:xxglitchioxxgaming@gmail.com" class="contact-button" target="_blank">EMAIL</a>
         </div>
     </section>
@@ -248,5 +269,26 @@
             | <a href="https://www.youtube.com/@xXGlitchIoXx" target="_blank">Visit my YouTube Channel</a>
         </p>
     </footer>
+
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById("language-select").value;
+            if (lang === "es") {
+                document.getElementById("header-text").innerText = "xXGlitchIoXx (Español)";
+                document.getElementById("intro-text").innerText = "¡BIENVENIDO AL MUNDO DE LA MODIFICACIÓN!";
+                document.getElementById("video-1-title").innerText = "APRENDER A MODIFICAR";
+                document.getElementById("video-1-desc").innerText = "Esta lista de reproducción te enseñará lo básico de la modificación de juegos.";
+                document.getElementById("video-2-title").innerText = "GUARDADOS MODIFICADOS";
+                document.getElementById("video-2-desc").innerText = "Aquí encontrarás todos mis guardados modificados.";
+                document.getElementById("video-3-title").innerText = "GLITCHES Y EXPLOTACIONES";
+                document.getElementById("video-3-desc").innerText = "Contiene todos los glitches/exploits que descubro.";
+                document.getElementById("video-4-title").innerText = "JUEGOS Y TUTORIALES";
+                document.getElementById("video-4-desc").innerText = "Aquí están mis videos de juegos y tutoriales.";
+                document.getElementById("contact-title").innerText = "Contáctame";
+            } 
+            // Add more languages here as needed
+        }
+    </script>
+
 </body>
 </html>
