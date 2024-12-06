@@ -194,33 +194,9 @@
             margin: 10px;
         }
 
-        /* Language Selector */
-        .language-select {
-            position: fixed; /* Fix it to the top of the page */
-            top: 20px;
-            left: 20px; /* Align it to the left of the screen */
-            background-color: #333;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 1.5rem; /* Slightly larger font for better visibility */
-            border: none;
-            cursor: pointer;
-            z-index: 10000; /* High z-index to ensure it is above other content */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
-        }
     </style>
 </head>
 <body>
-
-    <!-- Language Selector Dropdown -->
-    <select class="language-select" id="language-select" onchange="changeLanguage()">
-        <option value="en">English</option>
-        <option value="es">Spanish</option>
-        <option value="fr">French</option>
-        <option value="de">German</option>
-        <option value="it">Italian</option>
-    </select>
 
     <!-- Header Section -->
     <header>
@@ -273,25 +249,7 @@
         </p>
     </footer>
 
-    <script>
-        function changeLanguage() {
-            const lang = document.getElementById("language-select").value;
-            if (lang === "es") {
-                document.getElementById("header-text").innerText = "xXGlitchIoXx (Español)";
-                document.getElementById("intro-text").innerText = "¡BIENVENIDO AL MUNDO DE LA MODIFICACIÓN!";
-                document.getElementById("video-1-title").innerText = "APRENDER A MODIFICAR";
-                document.getElementById("video-1-desc").innerText = "Esta lista de reproducción te enseñará lo básico de la modificación de juegos.";
-                document.getElementById("video-2-title").innerText = "GUARDADOS MODIFICADOS";
-                document.getElementById("video-2-desc").innerText = "Aquí encontrarás todos mis guardados modificados.";
-                document.getElementById("video-3-title").innerText = "GLITCHES Y EXPLOTACIONES";
-                document.getElementById("video-3-desc").innerText = "Contiene todos los glitches/exploits que descubro.";
-                document.getElementById("video-4-title").innerText = "JUEGOS Y TUTORIALES";
-                document.getElementById("video-4-desc").innerText = "Aquí están mis videos de juegos y tutoriales.";
-                document.getElementById("contact-title").innerText = "Contáctame";
-            }
-            // Add more languages here as needed
-        }
-    </script>
-
 </body>
+</html>
+
 </html>
