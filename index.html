@@ -6,7 +6,7 @@
     <meta name="description" content="xXGlitchIoXx - Gaming, Glitches, and Tutorials">
     <title>Glitch Gaming Central</title>
     <!-- Favicon -->
-   <link rel="icon" href="images/LOGO.jpg" type="image/jpeg">
+    <link rel="icon" href="images/LOGO.jpg" type="image/jpeg">
 
     <style>
         /* Global styles */
@@ -21,47 +21,44 @@
             animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
         }
 
+        /* Darker Background Fading Keyframes */
         @keyframes background-fade {
-            0% { background-color: #ff0000; }
-            25% { background-color: #00ff00; }
-            50% { background-color: #0000ff; }
-            75% { background-color: #ff00ff; }
-            100% { background-color: #ffff00; }
+            0% { background-color: #660000; }
+            25% { background-color: #006600; }
+            50% { background-color: #000066; }
+            75% { background-color: #660066; }
+            100% { background-color: #666600; }
         }
 
         /* Header and Intro Fade Effect */
         header, .intro {
-            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
+            animation: background-fade 20s ease-in-out infinite;
         }
 
-        /* Glitchy Text Effect */
+        /* Slower Glitchy Text Effect (Longer duration and less intense) */
         @keyframes glitch {
             0% { text-shadow: 1px 0 red, -1px 0 blue; }
-            10% { text-shadow: -1px 0 red, 1px 0 blue; }
-            20% { text-shadow: 1px 0 green, -1px 0 yellow; }
-            30% { text-shadow: -1px 0 green, 1px 0 yellow; }
-            40% { text-shadow: 2px 0 red, -2px 0 blue; }
-            50% { text-shadow: -2px 0 red, 2px 0 blue; }
-            60% { text-shadow: 1px 0 orange, -1px 0 purple; }
-            70% { text-shadow: -1px 0 orange, 1px 0 purple; }
-            80% { text-shadow: 2px 0 yellow, -2px 0 cyan; }
-            90% { text-shadow: -2px 0 yellow, 2px 0 cyan; }
-            100% { text-shadow: 1px 0 red, -1px 0 blue; }
+            20% { text-shadow: -1px 0 red, 1px 0 blue; }
+            40% { text-shadow: 1px 0 green, -1px 0 yellow; }
+            60% { text-shadow: -1px 0 green, 1px 0 yellow; }
+            80% { text-shadow: 2px 0 red, -2px 0 blue; }
+            100% { text-shadow: -2px 0 red, 2px 0 blue; }
         }
 
+        /* Apply the slower glitch animation */
         .glitch {
-            font-size: 4rem; /* Increased font size */
+            font-size: 4rem;
             font-weight: bold;
-            color: #000; /* Changed text color to black */
-            animation: glitch 1s infinite;
+            color: #000; 
+            animation: glitch 4s infinite; /* Slower glitch animation (4 seconds duration) */
         }
 
         .intro {
-            font-size: 2.5rem; /* Increased font size */
+            font-size: 2.5rem;
             margin-top: 20px;
-            color: #000; /* Changed text color to black */
-            font-weight: bold; /* Made text bold */
-            animation: glitch 1s infinite;
+            color: #000;
+            font-weight: bold;
+            animation: glitch 4s infinite; /* Slower glitch animation */
         }
 
         /* Video Card Container */
@@ -76,44 +73,44 @@
 
         /* Consistent Styling for Video Cards */
         .video-card {
-            background-color: #333;
+            background-color: #222;  
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             color: #fff;
             text-decoration: none;
-            transition: transform 0.3s ease, background-color 20s ease-in-out infinite; /* Sync fade with background */
-            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
-            font-weight: bold; /* Made text bold */
+            transition: transform 0.3s ease, background-color 20s ease-in-out infinite;
+            animation: background-fade 20s ease-in-out infinite;
+            font-weight: bold;
         }
 
         /* Hover effect for all video cards */
         .video-card:hover {
             transform: scale(1.05);
-            background-color: #444; /* Slightly darker on hover */
+            background-color: #333; /* Even darker on hover */
         }
 
         .video-title, .video-card p {
             font-size: 1.5rem;
-            font-weight: bold; /* Made text bold */
-            color: #000; /* Changed text color to black */
-            animation: glitch 1s infinite;
-            margin: 0; /* Ensure consistent spacing */
+            font-weight: bold;
+            color: #000; 
+            animation: glitch 4s infinite;
+            margin: 0;
             text-align: center;
         }
 
         /* Contact Button styles */
         .contact-button {
-            color: #000; /* Changed text color to black */
-            padding: 20px 40px; /* Increased padding for better legibility */
+            color: #000;
+            padding: 20px 40px;
             margin: 15px;
             border-radius: 8px;
-            font-size: 3rem; /* Increased font size for even larger text */
+            font-size: 3rem;
             text-decoration: none;
-            background: none; /* Removed background */
-            border: none; /* Removed border */
+            background: none;
+            border: none;
             transition: transform 0.3s ease;
-            animation: glitch 1s infinite; /* Added glitch effect */
+            animation: glitch 4s infinite;
         }
 
         .contact-button:hover {
@@ -124,19 +121,19 @@
 
         /* Contact Section with multi-color fade background */
         .contact-section {
-            background-color: #000;
+            background-color: #111;  
             padding: 50px 20px;
             margin-top: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
-            font-weight: bold; /* Made text bold */
+            animation: background-fade 20s ease-in-out infinite;
+            font-weight: bold;
         }
 
         .contact-section h2 {
-            color: #000; /* Changed text color to black */
-            font-weight: bold; /* Made text bold */
-            animation: glitch 1s infinite;
+            color: #000; 
+            font-weight: bold;
+            animation: glitch 4s infinite;
         }
 
         footer {
@@ -159,7 +156,7 @@
         /* Mobile-first responsive adjustments */
         @media (max-width: 768px) {
             .contact-button {
-                font-size: 2rem; /* Slightly smaller font on mobile */
+                font-size: 2rem;
                 padding: 15px 30px;
             }
 
@@ -183,7 +180,7 @@
 
         /* Ensuring Symmetry and Layout */
         .video-card, .contact-section, footer {
-            max-width: 100%; /* Ensures it takes full width */
+            max-width: 100%;
             margin: 0 auto;
         }
 
@@ -249,7 +246,7 @@
     <!-- Footer Section -->
     <footer>
         <p>
-                      Copyright (c) 2024 xXGlitchIoXx
+            Copyright (c) 2024 xXGlitchIoXx
             <br>
             Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is provided to do so, subject to the following conditions:
             <br>
