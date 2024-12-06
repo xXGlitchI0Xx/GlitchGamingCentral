@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="xXGlitchIoXx - Gaming, Glitches, and Tutorials">
     <title>Glitch Gaming Central</title>
+    <!-- Favicon -->
+    <link rel="icon" href="LOGO.jpg" type="image/jpeg">
     <style>
         /* Global styles */
         body {
@@ -15,7 +17,7 @@
             padding: 0;
             text-align: center;
             min-height: 100vh;
-            animation: background-fade 40s ease-in-out infinite; /* Slow down fading effect */
+            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
         }
 
         @keyframes background-fade {
@@ -28,7 +30,7 @@
 
         /* Header and Intro Fade Effect */
         header, .intro {
-            animation: background-fade 40s ease-in-out infinite; /* Slow down fading effect */
+            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
         }
 
         /* Glitchy Text Effect */
@@ -47,17 +49,17 @@
         }
 
         .glitch {
-            font-size: 4rem;
+            font-size: 4rem; /* Increased font size */
             font-weight: bold;
-            color: #000;
+            color: #000; /* Changed text color to black */
             animation: glitch 1s infinite;
         }
 
         .intro {
-            font-size: 2.5rem;
+            font-size: 2.5rem; /* Increased font size */
             margin-top: 20px;
-            color: #000;
-            font-weight: bold;
+            color: #000; /* Changed text color to black */
+            font-weight: bold; /* Made text bold */
             animation: glitch 1s infinite;
         }
 
@@ -71,47 +73,52 @@
             margin: 0 auto;
         }
 
+        /* Consistent Styling for Video Cards */
         .video-card {
             background-color: #333;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            color: #000;
+            color: #fff;
             text-decoration: none;
-            transition: transform 0.3s ease, background-color 40s ease-in-out infinite;
-            animation: background-fade 40s ease-in-out infinite; /* Slow down fading effect */
-            font-weight: bold;
+            transition: transform 0.3s ease, background-color 20s ease-in-out infinite; /* Sync fade with background */
+            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
+            font-weight: bold; /* Made text bold */
         }
 
+        /* Hover effect for all video cards */
         .video-card:hover {
             transform: scale(1.05);
+            background-color: #444; /* Slightly darker on hover */
         }
 
         .video-title, .video-card p {
             font-size: 1.5rem;
-            font-weight: bold;
-            color: #000;
+            font-weight: bold; /* Made text bold */
+            color: #000; /* Changed text color to black */
             animation: glitch 1s infinite;
+            margin: 0; /* Ensure consistent spacing */
+            text-align: center;
         }
 
         /* Contact Button styles */
         .contact-button {
-            color: #000;
-            padding: 20px 40px;
+            color: #000; /* Changed text color to black */
+            padding: 20px 40px; /* Increased padding for better legibility */
             margin: 15px;
             border-radius: 8px;
-            font-size: 3rem;
+            font-size: 3rem; /* Increased font size for even larger text */
             text-decoration: none;
-            background: none;
-            border: none;
+            background: none; /* Removed background */
+            border: none; /* Removed border */
             transition: transform 0.3s ease;
-            animation: glitch 1s infinite;
+            animation: glitch 1s infinite; /* Added glitch effect */
         }
 
         .contact-button:hover {
             transform: scale(1.1);
-            color: #fff;
             background-color: #000;
+            color: #fff;
         }
 
         /* Contact Section with multi-color fade background */
@@ -121,13 +128,13 @@
             margin-top: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            animation: background-fade 40s ease-in-out infinite;
-            font-weight: bold;
+            animation: background-fade 20s ease-in-out infinite; /* Slower fading effect */
+            font-weight: bold; /* Made text bold */
         }
 
         .contact-section h2 {
-            color: #000;
-            font-weight: bold;
+            color: #000; /* Changed text color to black */
+            font-weight: bold; /* Made text bold */
             animation: glitch 1s infinite;
         }
 
@@ -151,7 +158,7 @@
         /* Mobile-first responsive adjustments */
         @media (max-width: 768px) {
             .contact-button {
-                font-size: 2rem;
+                font-size: 2rem; /* Slightly smaller font on mobile */
                 padding: 15px 30px;
             }
 
@@ -175,7 +182,7 @@
 
         /* Ensuring Symmetry and Layout */
         .video-card, .contact-section, footer {
-            max-width: 100%;
+            max-width: 100%; /* Ensures it takes full width */
             margin: 0 auto;
         }
 
@@ -184,6 +191,7 @@
             text-align: center;
         }
 
+        /* Center align buttons in contact section */
         .contact-buttons {
             display: flex;
             justify-content: center;
@@ -193,40 +201,43 @@
         .contact-button {
             margin: 10px;
         }
-
     </style>
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
-        <div class="glitch" id="header-text">xXGlitchIoXx</div>
-        <p class="intro" id="intro-text">WELCOME TO THE WORLD OF MODDING!</p>
+        <div class="glitch">xXGlitchIoXx</div>
+        <p class="intro">WELCOME TO THE WORLD OF MODDING!</p>
     </header>
 
     <!-- Video Grid Section -->
     <section class="video-grid">
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" class="video-card" target="_blank">
-            <div class="video-title" id="video-1-title">LEARNING TO MOD</div>
-            <p id="video-1-desc">This Playlist Will Teach You The Brief Surface of Modding a Game.</p>
+        <a href="https://www.youtube.com/playlist?list=PL4a7wG5tqqAPsT5V0A2Ht5ekvhWrUVwrg" class="video-card" target="_blank">
+            <div class="video-title">LEARNING TO MOD</div>
+            <p>This Playlist Will Teach You The Brief Surface of Modding a Game.</p>
         </a>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" class="video-card" target="_blank">
-            <div class="video-title" id="video-2-title">MODDED SAVES</div>
-            <p id="video-2-desc">In This Playlist You Will Find All of My Modded Saves.</p>
+        <a href="https://www.youtube.com/playlist?list=PL4a7wG5tqqANnNlXN8jxm8ePZ3BG5DrVk" class="video-card" target="_blank">
+            <div class="video-title">MODDED SAVES</div>
+            <p>In This Playlist You Will Find All of My Modded Saves.</p>
         </a>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" class="video-card" target="_blank">
-            <div class="video-title" id="video-3-title">GLITCHES & EXPLOITS</div>
-            <p id="video-3-desc">This Contains All Glitches/Exploits I Discover & Post.</p>
+        <a href="https://www.youtube.com/playlist?list=PL4a7wG5tqqAOPNLxO-BQJDEJoAcaFsgZf" class="video-card" target="_blank">
+            <div class="video-title">GLITCHES & EXPLOITS</div>
+            <p>This Contains All Glitches/Exploits I Discover & Post.</p>
         </a>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID_4" class="video-card" target="_blank">
-            <div class="video-title" id="video-4-title">GAMEPLAY & TUTORIALS</div>
-            <p id="video-4-desc">In This Playlist, You Will Find My Gameplay Videos & Tutorials.</p>
+        <a href="https://www.youtube.com/playlist?list=PL4a7wG5tqqAODvVGtcRf4PM7NvIIWWVVM" class="video-card" target="_blank">
+            <div class="video-title">ALL REVIEWS</div>
+            <p>The Playlist Linked Will Contain All The Reviews I do on Games or Saves.</p>
+        </a>
+        <a href="https://www.youtube.com/playlist?list=PL4a7wG5tqqAODvVGtcRf4PM7NvIIWWVVM" class="video-card" target="_blank">
+            <div class="video-title">THE GRAND MAFIA GUIDES</div>
+            <p>The Playlist Linked Will Contain All Guides Related to The Mobile Game The Grand Mafia.</p>
         </a>
     </section>
 
     <!-- Contact Section -->
     <section class="contact-section">
-        <h2 id="contact-title">Contact Me</h2>
+        <h2>SUGGEST CONTENT</h2>
         <div class="contact-buttons">
             <a href="https://discord.com/users/1066557474871709749" class="contact-button" target="_blank">DISCORD</a>
             <a href="https://t.me/xXGlitchIoXx" class="contact-button" target="_blank">TELEGRAM</a>
@@ -237,7 +248,7 @@
     <!-- Footer Section -->
     <footer>
         <p>
-            Copyright (c) 2024 xXGlitchIoXx
+                      Copyright (c) 2024 xXGlitchIoXx
             <br>
             Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is provided to do so, subject to the following conditions:
             <br>
@@ -250,6 +261,4 @@
     </footer>
 
 </body>
-</html>
-
 </html>
